@@ -1,10 +1,15 @@
 # Kotlin-Coroutine
 ## Table of content
+* [Guide Line Video Link](#Guide-Line-Video-Link)
 * [Basics And Foundation Of Coroutine](#Basics-And-Foundation-Of-Coroutine)
 * [Coroutine Builders](#Coroutine-Builders)
 * [Cancellation And Exception Handling](#Cancellation-And-Exception-Handling)
 * [Compose Suspending Functions](#Compose-Suspending-Functions)
 * [CoroutineScope, CoroutineContext and Dispatchers](#CoroutineScope,-CoroutineContext-and-Dispatchers)
+* [What are coroutines](#What-are-coroutines)
+
+### Guide Line Video Link
+https://www.youtube.com/watch?v=lmRzRKIsn1g&t=576s
 
 ### Basics And Foundation Of Coroutine
 * What exactly a coroutine?
@@ -42,4 +47,10 @@
         - Role of a dispatcher: to assign a thread to a coroutine. 
         - Types of Dispatcher: Confined, Unconfined, Default, Main, and IO
 * Components of CoroutineContext: Job, Dispatcher, and Coroutine Name.
+
+### What are coroutines
+Well to understand what are coroutines , you would need to first understand, how exactly your application works when user launches your application.
+So when the user launches the application, a default **THREAD** is created and this thread is known as **MAIN THREAD**.
+Now this main thread is the life of the application. 
+Let us represent the main thread with the help of this blue arrow.
       
