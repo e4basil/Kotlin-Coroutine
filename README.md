@@ -9,7 +9,7 @@
 * [What are coroutines](#What-are-coroutines)
 
 ### Guide Line And Video Link
-https://www.youtube.com/watch?v=lmRzRKIsn1g&t=576s
+https://www.youtube.com/watch?v=lmRzRKIsn1g&t=576s <br />
 https://github.com/smartherd/KotlinTutorial/tree/master/src
 
 ### Basics And Foundation Of Coroutine
