@@ -49,8 +49,13 @@ https://www.youtube.com/watch?v=lmRzRKIsn1g&t=576s
 * Components of CoroutineContext: Job, Dispatcher, and Coroutine Name.
 
 ### What are coroutines
-Well to understand what are coroutines , you would need to first understand, how exactly your application works when user launches your application.
-So when the user launches the application, a default **THREAD** is created and this thread is known as **MAIN THREAD**.
-Now this main thread is the life of the application. 
-Let us represent the main thread with the help of this blue arrow.
+* Well to understand what are coroutines , you would need to first understand, how exactly your application works when user launches your application.
+* So when the user launches the application, a default **THREAD** is created and this thread is known as **MAIN THREAD**.
+* Now this main thread is the life of the application. 
+* Let us represent the main thread with the help of this blue arrow.
+* So what is the purpose of having a main thread , On this main thread we perform very small and lightweight operations <br />
+  Such as UI interactions , click on the buttons , mathematical operation  or light weight logical operations. 
+* So basically on the main thread we perform small operations.
+* Now what about long and heavy operations,<br />
+  Such as 
       
