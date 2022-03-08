@@ -7,7 +7,7 @@ fun main() = runBlocking {
     launch {
         println("launch: $this")
 
-        launch(coroutineContext) {
+        launch {
             println("child launch: $this")
         }
     }
