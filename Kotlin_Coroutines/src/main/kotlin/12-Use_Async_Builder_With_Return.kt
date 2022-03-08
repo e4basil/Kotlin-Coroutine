@@ -18,9 +18,11 @@ fun useAsyncBuilderWithReturn() = runBlocking {  // creates a coroutine that blo
         "John"
     }
 
-    jobDeferred.join()
+    // jobDeferred.join()
     // If you want to use the return value you can use function
-    //jobDeferred.await()
+    val result = jobDeferred.await()
+
+    println("Return type  $result")
 
     println("Main program ends ${Thread.currentThread().name}")
 }

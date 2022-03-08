@@ -18,7 +18,7 @@ fun createBackgroundThread() {
     println("Main program ends ${Thread.currentThread().name}")
 
     // The background thread did not block the code of the main thread , these two threads are running in parallel.
-    // Hence immediately after line 19 was executed , the code within the main thread resumes.
+    // Hence immediately after line 12 was executed , the code within the main thread resumes.
     // They ran in parallel i.e in a concurrent manner.
     // Just note that in case of threads, the application waits for all background threads to complete.
 }

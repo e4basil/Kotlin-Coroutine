@@ -10,7 +10,7 @@ fun useAsyncBuilder() = runBlocking {  // creates a coroutine that blocks the cu
     // This coroutine runs on the main thread
     println("Main program starts ${Thread.currentThread().name}")
 
-    val job = async {  // Thread main
+    val job :Job = async {  // Thread main
         // This child coroutine inherits the scope of parent coroutine
         println("Fake work starts ${Thread.currentThread().name}")
         delay(1000)

@@ -10,7 +10,7 @@ fun useGlobalAsyncBuilderWithReturn() = runBlocking {  // creates a coroutine th
     // This coroutine runs on the main thread
     println("Main program starts ${Thread.currentThread().name}")
 
-    val jobDeferred : Deferred<String> = GlobalScope.async {  // Thread main
+    val jobDeferred : Deferred<String> = GlobalScope.async {  // Thread T1
         // This child coroutine inherits the scope of parent coroutine
         println("Fake work starts ${Thread.currentThread().name}")
         delay(1000)

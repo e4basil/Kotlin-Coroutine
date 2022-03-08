@@ -11,7 +11,8 @@ fun main() = runBlocking {    // Creates a blocking coroutine that executes in c
                 // also use return@launch
             }
             print("$i.")
-            Thread.sleep(1)
+            //delay(1)
+             Thread.sleep(1)
             // we are using Thread.sleep() here in place of delay() to check the isActive status.
             // if we use delay here it will work as cooperative suspend function
         }
