@@ -5,11 +5,11 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
 fun main() {   // Executes in main thread
-    useJonWithLaunchBuilder()
+    useJobWithLaunchBuilder()
 
 }
 
-fun useJonWithLaunchBuilder() = runBlocking {  // creates a coroutine that blocks the current main thread
+fun useJobWithLaunchBuilder() = runBlocking {  // creates a coroutine that blocks the current main thread
     // This coroutine runs on the main thread
     println("Main program starts ${Thread.currentThread().name}")
 
