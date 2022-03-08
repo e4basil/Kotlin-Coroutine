@@ -16,7 +16,7 @@ fun createFirstCoroutine() {
         println("Fake work finished ${Thread.currentThread().name}")
     }
 
-    //Thread.sleep(2000)
+   // Thread.sleep(2000)
 
     println("Main program ends ${Thread.currentThread().name}")
 
