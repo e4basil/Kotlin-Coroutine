@@ -13,8 +13,8 @@ fun main() = runBlocking {    // Creates a blocking coroutine that executes in c
         }
     }
 
-    //delay(1000)  // Let's print a few values before we cancel
-    //job.cancelAndJoin()
+    delay(1000)  // Let's print a few values before we cancel
+    //job.cancelAndJoin()  // we can also use this function
     job.cancel()
     job.join()
 

@@ -3,7 +3,6 @@ import kotlinx.coroutines.*
 
 fun main() {   // Executes in main thread
     useAsyncBuilderWithReturn()
-
 }
 
 fun useAsyncBuilderWithReturn() = runBlocking {  // creates a coroutine that blocks the current main thread
@@ -18,7 +17,8 @@ fun useAsyncBuilderWithReturn() = runBlocking {  // creates a coroutine that blo
         "John"
     }
 
-    // jobDeferred.join()
+    // jobDeferred.join() (If you don't want to use the return value you can use this function)_
+
     // If you want to use the return value you can use function
     val result = jobDeferred.await()
 

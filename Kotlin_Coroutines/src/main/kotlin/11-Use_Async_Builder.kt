@@ -3,7 +3,6 @@ import kotlinx.coroutines.*
 
 fun main() {   // Executes in main thread
     useAsyncBuilder()
-
 }
 
 fun useAsyncBuilder() = runBlocking {  // creates a coroutine that blocks the current main thread

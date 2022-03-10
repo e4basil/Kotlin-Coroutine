@@ -5,7 +5,9 @@ fun main() = runBlocking {    // Creates a blocking coroutine that executes in c
     println("Main program starts: ${Thread.currentThread().name}")  // main thread
     val msgOne: Deferred<String> = async(start = CoroutineStart.LAZY) { getMessageOneLazyAsync() }
     val msgTwo: Deferred<String> = async(start = CoroutineStart.LAZY) { getMessageTwoLazyAsync() }
-    //println("The entire message is: ${msgOne.await() + msgTwo.await()}")
+
+    // If we are not using the above 2 variables , the coroutines will not execute due to Lazy .
+    println("The entire message is: ${msgOne.await() + msgTwo.await()}")
 
     println("Main program ends: ${Thread.currentThread().name}")    // main thread
 }

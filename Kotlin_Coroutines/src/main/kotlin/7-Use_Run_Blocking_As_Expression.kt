@@ -5,7 +5,6 @@ import kotlinx.coroutines.runBlocking
 
 fun main() {   // Executes in main thread
     makeFunctionAsRunBlockingExpression()
-
 }
 
 fun makeFunctionAsRunBlockingExpression() = runBlocking {  // creates a coroutine that blocks the current main thread

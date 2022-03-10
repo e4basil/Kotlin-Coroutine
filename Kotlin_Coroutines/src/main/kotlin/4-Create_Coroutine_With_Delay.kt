@@ -4,7 +4,6 @@ import kotlinx.coroutines.launch
 
 fun main() {   // Executes in main thread
     createCoroutineWithDelay()
-
 }
 
 fun createCoroutineWithDelay() {
@@ -19,5 +18,4 @@ fun createCoroutineWithDelay() {
     Thread.sleep(2000)
 
     println("Main program ends ${Thread.currentThread().name}")
-
 }

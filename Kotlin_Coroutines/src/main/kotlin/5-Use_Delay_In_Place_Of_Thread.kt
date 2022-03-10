@@ -5,7 +5,6 @@ import kotlinx.coroutines.runBlocking
 
 fun main() {   // Executes in main thread
     useDelayInPlaceOfThread()
-
 }
 
 fun useDelayInPlaceOfThread() {

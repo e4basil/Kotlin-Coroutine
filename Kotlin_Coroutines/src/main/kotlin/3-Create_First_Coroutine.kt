@@ -3,7 +3,6 @@ import kotlinx.coroutines.launch
 
 fun main() {   // Executes in main thread
     createFirstCoroutine()
-
 }
 
 

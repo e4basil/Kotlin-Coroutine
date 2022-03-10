@@ -6,7 +6,6 @@ import kotlinx.coroutines.runBlocking
 
 fun main() {   // Executes in main thread
     useJobWithLaunchBuilder()
-
 }
 
 fun useJobWithLaunchBuilder() = runBlocking {  // creates a coroutine that blocks the current main thread
@@ -20,7 +19,7 @@ fun useJobWithLaunchBuilder() = runBlocking {  // creates a coroutine that block
         println("Fake work finished ${Thread.currentThread().name}")
     }
 
-    // delay(2000) // executes on main thread
+    // delay(2000) // executes on main thread (No need to write delay now)
     job.join()
 
     println("Main program ends ${Thread.currentThread().name}")

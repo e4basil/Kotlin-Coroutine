@@ -5,7 +5,6 @@ import kotlinx.coroutines.runBlocking
 
 fun main() {   // Executes in main thread
     useLaunchBuilder()
-
 }
 
 fun useLaunchBuilder() = runBlocking {  // creates a coroutine that blocks the current main thread

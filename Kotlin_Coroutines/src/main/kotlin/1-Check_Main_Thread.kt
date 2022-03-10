@@ -1,6 +1,5 @@
 fun main() {   // Executes in main thread
     checkMainThread()
-
 }
 fun checkMainThread() {
     println("Main program starts ${Thread.currentThread().name}")

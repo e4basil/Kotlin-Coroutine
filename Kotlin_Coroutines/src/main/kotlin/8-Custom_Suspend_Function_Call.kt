@@ -5,7 +5,6 @@ import kotlinx.coroutines.runBlocking
 
 fun main() {   // Executes in main thread
     customSuspendFunctionCall()
-
 }
 
 fun customSuspendFunctionCall() = runBlocking {
