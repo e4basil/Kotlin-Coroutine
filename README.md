@@ -1,31 +1,40 @@
 # Kotlin-Coroutine
 ## Table of content
 * [Guide Line And Video Link](#Guide-Line-And-Video-Link)
-* [Basics And Foundation Of Coroutine](#Basics-And-Foundation-Of-Coroutine)
-* [Coroutine Builders](#Coroutine-Builders)
-* [Cancellation And Exception Handling](#Cancellation-And-Exception-Handling)
-* [Compose Suspending Functions](#Compose-Suspending-Functions)
-* [CoroutineScope, CoroutineContext and Dispatchers](#CoroutineScope,-CoroutineContext-and-Dispatchers)
+* [What we will cover in this repository](#What-we-will-cover-in-this-repository)
+* [1- Basics And Foundation Of Coroutine](#1-Basics-And-Foundation-Of-Coroutine)
+* [2- Coroutine Builders](#2-Coroutine-Builders)
+* [3- Cancellation And Exception Handling](#3-Cancellation-And-Exception-Handling)
+* [4- Compose Suspending Functions](#4-Compose-Suspending-Functions)
+* [5- CoroutineScope, CoroutineContext and Dispatchers](#5-CoroutineScope,-CoroutineContext-and-Dispatchers)
 * [What are coroutines](#What-are-coroutines)
+* [Couroutine Scope vs Coroutines context](#Couroutine Scope vs Coroutines context)
 
 ### Guide Line And Video Link
 https://www.youtube.com/watch?v=lmRzRKIsn1g&t=576s <br />
 https://github.com/smartherd/KotlinTutorial/tree/master/src
 
-### Basics And Foundation Of Coroutine
+### What we will cover in this repository
+1- Basics And Foundation Of Coroutine <br>
+2- Coroutine Builders <br>
+3- Cancellation and Exception Handling <br>
+4- Compose Suspending Functions <br>
+5- CoroutineScope, CoroutineContext and Dispatchers <br>
+
+### 1-Basics And Foundation Of Coroutine
 * What exactly a coroutine?
 * How can you create them?
 * What are coroutine builders such as launch, async and runblocking functions.
 * What are suspending functions?
 * How coroutine are different from threads?
 
-### Coroutine Builders
+### 2-Coroutine Builders
 * We will dive a little deeper into each coroutine builder.
 * Use GlobalScope companion object to launch coroutines. 
 * Why GlobalScope is discouraged to use? 
 * We will write first test case using coroutine.
 
-### Cancellation and Exception Handling
+### 3-Cancellation and Exception Handling
 * Learn to cancel coroutines and handle exceptions.
 * What is cooperative coroutine? How to write a cooperative code? 
 * Explore job.cancel(), and job.cancelAndJoin() functions.
@@ -34,12 +43,12 @@ https://github.com/smartherd/KotlinTutorial/tree/master/src
 * Handle CancellationException and TimeoutCancellationException.   
 * Use withContext(NonCancellable), withTimeout, and withTimeoutOrNull coroutine builders
 
-### Compose Suspending Functions
+### 4-Compose Suspending Functions
 * Explore how code execution in coroutine is sequential by default.
 * How to execute suspending functions in a coroutine concurrently?
 * Lazily execute async coroutine by using CoroutineStart.LAZY 
 
-### CoroutineScope, CoroutineContext and Dispatchers
+### 5-CoroutineScope, CoroutineContext and Dispatchers
 * We will move to intermediate to little advanced concepts of coroutines.
 * We will learn core concepts of coroutines such as CoroutineScope, CoroutineContext and Dispatchers.
 * Understand what is CoroutineScope?
@@ -84,5 +93,24 @@ https://github.com/smartherd/KotlinTutorial/tree/master/src
 * **Remember** coroutines are not threads.
 * Coroutines are very very cheap , they are almost free we can create thousands of them and we don't need to worry about memory consumption, your application will run as smooth as you can imagine. Thats not possible incase of threads, you cannot create thousands of threads at a time.
 * So for modern applications coroutines are indeed the modern solution.
+
+### Couroutine Scope vs Coroutines context
+
+The scope provides a reference(e.g. Job) to cancel them and context provides a reference to underlying thread. 
   
-      
+#### Scope
+
+A coroutine must run in a scope <br />
+It is a way to keep track of all coroutines that run in it <br />
+All (cooperative) coroutines can be cancelled via their scope <br />
+Scopes get uncaught exceptions <br />
+They are a way to bind coroutines to an application specific lifecycle (e.g. viewModelScope in Android) to avoid leaking <br />
+
+#### Context
+
+The context determines on which thread the coroutines will run. There are four options:
+
+Dispatchers.Default - for CPU intense work (e.g. sorting a big list) <br />
+Dispatchers.Main - what this will be depends on what you've added to your programs runtime dependencies (e.g. kotlinx-coroutines-android, for the UI thread in Android) <br />
+Dispatchers.Unconfined - runs coroutines unconfined on no specific thread <br />
+Dispatchers.IO - for heavy IO work (e.g. long-running database queries)<br />
