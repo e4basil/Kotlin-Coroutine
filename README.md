@@ -7,8 +7,9 @@
 * [3- Cancellation And Exception Handling](#3-Cancellation-And-Exception-Handling)
 * [4- Compose Suspending Functions](#4-Compose-Suspending-Functions)
 * [5- CoroutineScope, CoroutineContext and Dispatchers](#5-CoroutineScope,-CoroutineContext-and-Dispatchers)
+* [Why we need coroutines](#Why-we-need-coroutines)
 * [What are coroutines](#What-are-coroutines)
-* [Couroutine Scope vs Coroutines context](#Couroutine Scope vs Coroutines context)
+* [Couroutine Scope vs Coroutines context](#Couroutine-Scope-vs-Coroutines-context)
 
 ### Guide Line And Video Link
 https://www.youtube.com/watch?v=lmRzRKIsn1g&t=576s <br />
@@ -87,7 +88,7 @@ https://github.com/smartherd/KotlinTutorial/tree/master/src
  Similary we can have more coroutines to perform other operations.
 * **NOTE** In short with the memory consumption of one background thread you can perform so many heavy operations.
 
-### How we define coroutines
+### What are coroutines
 * You can think of coroutines as light weight threads.
 * Like threads coroutines can run in parallel, wait for each other to finish and even communicate with each other.
 * **Remember** coroutines are not threads.
